@@ -20,10 +20,12 @@ let remainingTurns = 3;
 
 // set event listeners to update state and DOM
 pickNumberButton.addEventListener('click', () => {
-   
+    
     //convert guess to a number
     let userGuess = +(numberChoice.value);
 
+
+    //displays results section again after clicking reset button
     resultsSection.style.display = "flex";
 
     //write if esle statement with compareNumbers funtion inside and message displays
@@ -64,6 +66,10 @@ resetButton.addEventListener('click', () => {
     resetButton.style.display ='none';
     pickNumberButton.textContent = 'Make Your Choice!'
     pickNumberButton.style.backgroundColor = "black";
+    highOrLow.textContent = '';
+    winOrLose.textContent = '';
+    remainingTurnsDisplay.textContent = '';
+
     resultsSection.style.display = "none";
 
 });
