@@ -22,4 +22,45 @@ body {
     background-color: var(--color2);
 }
 
+header {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+}
 
+p {
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+.game-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+form {
+    font-size: 2rem;
+}
+
+button {
+    height: 9rem;
+    width: 9rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.results-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    border: solid black 1px;
+    border-radius: 25%;
+    background-color: rgba(153, 205, 50, 0.534);   
+}

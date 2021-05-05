@@ -6,7 +6,7 @@ const numberChoice = document.getElementById('number-chooser');
 const pickNumberButton = document.getElementById('pick-number-button');
 const highOrLow = document.getElementById('high-or-low');
 const winOrLose = document.getElementById('win-or-lose');
-let remainingTurns = document.getElementById('turns-remaining');
+const remainingTurnsDisplay = document.getElementById('turns-remaining');
 
 
 // initialize state
@@ -14,7 +14,7 @@ let remainingTurns = document.getElementById('turns-remaining');
 let correctNumber = Math.ceil(Math.random() * 20);
 
 //sets initial state of number of turns to 3 to start the game
-remainingTurns = 3;
+ let remainingTurns = 3;
 
 
 // set event listeners to update state and DOM
@@ -36,8 +36,8 @@ pickNumberButton.addEventListener('click', () => {
     if(compareNumbers(correctNumber, userGuess) === 0) {
         winOrLose.textContent = `'${userGuess} is correct! You Win!'`;
     }
-    if(remainingTurns === 0) {
-        remainingTurns.textContent = "You are out of turns!";
+    if(remainingTurns < 1) {
+        remainingTurnsDisplay.textContent = "You are out of turns!";
         winOrLose.textContent = "You Lose, Better Luck Next Time!";
     }
-}
+});
