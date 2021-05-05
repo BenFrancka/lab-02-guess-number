@@ -18,4 +18,17 @@ remainingTurns = 3;
 
 
 // set event listeners to update state and DOM
+pickNumberButton.addEventListener('click', () => {
+    //on click, use one turn
+    remainingTurns--;
+    if(remainingTurns === 0)
+        return;
+    //convert guess to a number
+    let userGuess = +(numberChoice.value);
 
+    //write if esle statement with compareNumbers funtion inside and message displays
+    if(compareNumbers(correctNumber, userGuess) === 1) {
+
+    }
+    
+};
