@@ -19,16 +19,25 @@ remainingTurns = 3;
 
 // set event listeners to update state and DOM
 pickNumberButton.addEventListener('click', () => {
-    //on click, use one turn
-    remainingTurns--;
-    if(remainingTurns === 0)
-        return;
+    
     //convert guess to a number
     let userGuess = +(numberChoice.value);
 
     //write if esle statement with compareNumbers funtion inside and message displays
+    //degrade number of turns when appropriate
     if(compareNumbers(correctNumber, userGuess) === 1) {
-
+        highOrLow.textContent = `'${userGuess} is too high, try again'`;
+        remainingTurns--;
     }
-    
-};
+    if(compareNumbers(correctNumber, userGuess) === -1) {
+        highOrLow.textContent = `'${userGuess} is too low, try again'`;
+        remainingTurns--;
+    }
+    if(compareNumbers(correctNumber, userGuess) === 0) {
+        winOrLose.textContent = `'${userGuess} is correct! You Win!'`;
+    }
+    if(remainingTurns === 0) {
+        remainingTurns.textContent = "You are out of turns!";
+        winOrLose.textContent = "You Lose, Better Luck Next Time!";
+    }
+}
