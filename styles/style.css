@@ -64,3 +64,19 @@ button {
     border-radius: 25%;
     background-color: rgba(153, 205, 50, 0.534);   
 }
+
+.reset-game {
+    display: flex;
+    justify-content: center;
+    padding: 2rem; 
+}
+
+.reset-button {
+    display: none;
+    background-color: green;
+}
+
+.results-section {
+    display: flex;
+    justify-content: center;
+}
