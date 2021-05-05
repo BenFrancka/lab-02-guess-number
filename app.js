@@ -58,11 +58,14 @@ pickNumberButton.addEventListener('click', () => {
 
 });
 
+//adds event listener to reset the game
 resetButton.addEventListener('click', () => {
     
+    //resets state
     correctNumber = Math.ceil(Math.random() * 20);
     remainingTurns = 3;  
 
+    //resets CSS stylings to original state, clears string content to an empty string
     resetButton.style.display ='none';
     pickNumberButton.textContent = 'Make Your Choice!'
     pickNumberButton.style.backgroundColor = "black";
@@ -70,6 +73,7 @@ resetButton.addEventListener('click', () => {
     winOrLose.textContent = '';
     remainingTurnsDisplay.textContent = '';
 
+    //hides results section
     resultsSection.style.display = "none";
 
 });
